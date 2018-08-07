@@ -17,7 +17,7 @@ class GithubService
   def get_username
     user_response = Faraday.get "https://api.github.com/user", {}, {'Authorization' => "token #{self.access_token}", 'Accept' => 'application/json'}
     user_json = JSON.parse(user_response.body)
-    @user = user_json["login"]
+    user_json["login"]
   end
 
   def get_repos
