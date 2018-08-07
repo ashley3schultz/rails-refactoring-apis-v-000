@@ -32,4 +32,4 @@ RSpec.configure do |config|
   end
 end
 
-WebMock.enable_net_connect!
+WebMock.allow_net_connect!
